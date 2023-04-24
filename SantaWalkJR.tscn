@@ -1,0 +1,55 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://sounds/spongebobwalk.ogg" type="AudioStream" id=1]
+[ext_resource path="res://JR resources/anim/Walk (3).png" type="Texture" id=2]
+[ext_resource path="res://JR resources/anim/Walk (4).png" type="Texture" id=3]
+[ext_resource path="res://JR resources/anim/Walk (6).png" type="Texture" id=4]
+[ext_resource path="res://JR resources/anim/Walk (8).png" type="Texture" id=5]
+[ext_resource path="res://JR resources/anim/Walk (5).png" type="Texture" id=6]
+[ext_resource path="res://JR resources/anim/Walk (9).png" type="Texture" id=7]
+[ext_resource path="res://JR resources/anim/Walk (7).png" type="Texture" id=8]
+[ext_resource path="res://JR resources/anim/Walk (10).png" type="Texture" id=9]
+[ext_resource path="res://JR resources/anim/Walk (11).png" type="Texture" id=10]
+[ext_resource path="res://JR resources/anim/Walk (13).png" type="Texture" id=11]
+[ext_resource path="res://JR resources/anim/Walk (1).png" type="Texture" id=12]
+[ext_resource path="res://JR resources/anim/Walk (12).png" type="Texture" id=13]
+[ext_resource path="res://JR resources/anim/Walk (2).png" type="Texture" id=14]
+[ext_resource path="res://SantaWalkJR.gd" type="Script" id=15]
+[ext_resource path="res://JR resources/anim/Idle (1).png" type="Texture" id=16]
+[ext_resource path="res://JR resources/anim/Idle (3).png" type="Texture" id=17]
+[ext_resource path="res://JR resources/anim/Idle (2).png" type="Texture" id=18]
+[ext_resource path="res://JR resources/anim/Idle (4).png" type="Texture" id=19]
+[ext_resource path="res://JR resources/anim/Idle (8).png" type="Texture" id=20]
+[ext_resource path="res://JR resources/anim/Idle (9).png" type="Texture" id=21]
+[ext_resource path="res://JR resources/anim/Idle (5).png" type="Texture" id=22]
+[ext_resource path="res://JR resources/anim/Idle (7).png" type="Texture" id=23]
+[ext_resource path="res://JR resources/anim/Idle (6).png" type="Texture" id=24]
+[ext_resource path="res://sounds/National Anthem of USSR OGG Short.ogg" type="AudioStream" id=25]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "SantaIdle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 14 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "SantaWalk",
+"speed": 20.0
+} ]
+
+[node name="SantaWalk" type="AnimatedSprite"]
+position = Vector2( 535.946, 291.52 )
+scale = Vector2( 0.230193, 0.297972 )
+frames = SubResource( 1 )
+animation = "SantaIdle"
+frame = 2
+playing = true
+script = ExtResource( 15 )
+
+[node name="SqueakWalk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )

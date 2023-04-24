@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://JR resources/wBank_00000.png" type="Texture" id=1]
+
+[node name="Bank" type="Sprite"]
+position = Vector2( 525.38, 130.815 )
+scale = Vector2( 0.246335, 0.264171 )
+texture = ExtResource( 1 )
